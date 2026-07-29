@@ -92,3 +92,12 @@ def standard_deviation(numbers: Sequence[float | int]) -> float:
     mean = math.fsum(validated) / n
     variance = math.fsum((x - mean) ** 2 for x in validated) / (n - 1)
     return math.sqrt(variance)
+
+def variance(numbers: Sequence[float | int]) -> float:
+    """Return the sample variance of a sequence of numbers."""
+    validated = _validate_numeric_sequence(numbers)
+    n = len(validated)
+    if n < 2:
+        raise ValueError("Cannot compute variance with fewer than 2 values")
+    mean = math.fsum(validated) / n
+    return math.fsum((x - mean) ** 2 for x in validated) / (n - 1)
