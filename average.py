@@ -24,7 +24,7 @@ def _validate_numeric_sequence(
 
 
 def average(numbers: Sequence[float | int]) -> float:
-    """Return the arithmetic mean of a sequence of numbers.
+    """Calculate the arithmetic mean (average) of all numbers in the sequence.
 
     Args:
         numbers: A non-empty sequence of int or float values.
